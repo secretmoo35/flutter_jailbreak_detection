@@ -2,7 +2,7 @@ group 'appmire.be.flutterjailbreakdetection'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.7.20'
+    ext.kotlin_version = '1.8.0'
     repositories {
         google()
         mavenCentral()
@@ -34,6 +34,15 @@ android {
     }
     defaultConfig {
         minSdkVersion 17
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = 17
     }
 }
 
